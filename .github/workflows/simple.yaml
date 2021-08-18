@@ -4,14 +4,5 @@ jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "$GITHUB_CONTEXT"
+      - run: env
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: echo a string
-        run: echo "Hello Workd from yash-github-actions"
-      - name: multiline script
-        run: |
-          node -v
-          npm -v
-          hostname
-          uptime
-          ulimit
