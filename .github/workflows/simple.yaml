@@ -10,9 +10,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: install beautifulsoup requests pandas
+      - name: install beautifulsoup requests pandas openpyxl 
         run: |
-          pip3 install beautifulsoup4 requests pandas
+          pip3 install beautifulsoup4 requests pandas openpyxl 
       - name: execute my script
         run: |
           python gcpstatus.py
