@@ -11,3 +11,6 @@ jobs:
       - name: execute my script
         run: |
           python --version
+      - name: install beautiful soup
+        run: |
+          pip3 install beautifulsoup4
