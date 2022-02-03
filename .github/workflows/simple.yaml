@@ -1,17 +1,13 @@
-name: shel commands
-on: [push,pull_request]
+name: runpy
+on: [push]
 jobs: 
-  run-shell-commands:
+  runpy:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "$GITHUB_CONTEXT"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: echo a string
-        run: echo "Hello Workd from yash-github-actions"
-      - name: multiline script
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: execute my script
         run: |
-          node -v
-          npm -v
-          hostname
-          uptime
-          ulimit
+          python --version
