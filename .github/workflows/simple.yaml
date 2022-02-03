@@ -16,3 +16,5 @@ jobs:
       - name: execute my script
         run: |
           python gcpstatus.py
+      - name: list the files
+        run: ls -l
