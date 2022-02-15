@@ -14,7 +14,8 @@ rows = table_body.findAll('tr', class_='product-row')
 services_status_list = []
 for row in rows:
     product_name = row.find('td', 'product-name')
-    multi_tags = row.select('td:nth-of-type( 9 )')
+    multi_tags = row.select('td:nth-last-of-type( 1 )')
+    print(multi_tags)
     service_status = ""
     for x in multi_tags:
         if "status-icon available" in str(x):
