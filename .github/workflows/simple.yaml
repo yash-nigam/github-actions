@@ -15,7 +15,7 @@ jobs:
           pip3 install beautifulsoup4 requests pandas openpyxl 
       - name: execute my script
         run: |
-          python gcpstatus.py
+          python gcpstatus2.py
       - name: list the files
         run: ls -l
       - id: 'auth'
